@@ -34,7 +34,7 @@ console.log('map height:', N-S);
 console.log(N,S,E,W);
 
 request.post({
-  url: 'http://localhost:8080/ReceiveJSON',
+  url: 'http://localhost:8080/postgisData',
   headers: {
     'Content-Type': 'application/json'
   },
@@ -44,7 +44,7 @@ request.post({
     east: E,
     west: W,
     r: rows,
-    c: cols 
+    c: cols
   })
 }, function(error, response, body){
   console.log(body);
