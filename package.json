@@ -1,0 +1,20 @@
+{
+  "name": "gisClient",
+  "version": "0.1.0",
+  "description": "Embers postgis and grass client",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap tests/test*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/FireEmbers/gisclient.git"
+  },
+  "author": "Flávio Sousa",
+  "license": "MIT",
+  "gitHead": "2e08ffbd22508facb690c3afffce9c59760593a6",
+  "dependencies": {
+    "request": "~2.26.0",
+    "cconv": "~0.1.0"
+  }
+}
