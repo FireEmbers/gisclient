@@ -25,8 +25,8 @@ console.log('var N = ',N+';');
 console.log('var S = ',S+';');
 
 
-var rows = 100;
-var cols = 100;
+var rows = 10;
+var cols = 10;
 
 console.log('map length:', E-W);
 console.log('map height:', N-S);

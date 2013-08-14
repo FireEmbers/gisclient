@@ -4,8 +4,15 @@ module.exports = function (bodyObj, type, cb){
 
   baelishURL = 'ec2-54-227-182-120.compute-1.amazonaws.com';
 
+  var URL;
+  if (type === 'postgis')
+    URL = 'http://'+ baelishURL + ':8080/postgisdata';
+  else
+    URL = 'http://'+ baelishURL + ':8081/grassdata';
+
+
   request.post({
-    url: 'http://'+ baelishURL + ':8080/'+ type +'data',
+    url: URL,
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(bodyObj)
   }, function(error, response, body){
