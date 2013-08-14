@@ -19,7 +19,11 @@ var boundaries = {
   r: rows,
   c: cols };
 
-postgisClient(boundaries, function(data){console.log(data)});
+
+//Choose which database you wan't to access 
+var type = 'grass' || 'postgis';
+
+postgisClient(boundaries, type, function(data){console.log(data)});
 
 ```
 
