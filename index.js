@@ -1,8 +1,6 @@
 module.exports = function (bodyObj, type, cb){
 
-
   var request = require('request');
-
 
   baelishURL = 'ec2-54-227-182-120.compute-1.amazonaws.com';
 
