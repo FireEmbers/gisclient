@@ -10,7 +10,6 @@ module.exports = function (bodyObj, type, cb){
   else
     URL = 'http://'+ baelishURL + ':8081/grassdata';
 
-
   request.post({
     url: URL,
     headers: {'Content-Type': 'application/json'},
