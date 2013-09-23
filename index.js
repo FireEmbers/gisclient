@@ -6,9 +6,9 @@ module.exports = function (bodyObj, type, cb){
 
   var URL;
   if (type === 'postgis')
-    URL = 'http://'+ baelishURL + ':8080/postgisdata';
+    URL = 'http://'+ baelishURL + '/postgisdata';
   else
-    URL = 'http://'+ baelishURL + ':8081/grassdata';
+    URL = 'http://'+ baelishURL + '/grassdata';
 
   request.post({
     url: URL,
