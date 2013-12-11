@@ -16,7 +16,7 @@ module.exports = function (bodyObj, type, cb){
     headers: {'Content-Type': 'application/json'},
     body: JSON.stringify(bodyObj)
   }, function(error, response, body){
-    if (error) throw error;
-    cb(body);
+    if (error) cb (error, null);
+    cb(null, body);
   });
 }

@@ -40,4 +40,7 @@ var boundaries = {
   r: rows,
   c: cols};
 
-postgisClient(boundaries, 'postgis', function(data){console.log(data)});
+postgisClient(boundaries, 'postgis', function(err, data){
+  if (err) throw err;
+  console.log(data)
+});
