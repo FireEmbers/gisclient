@@ -3,11 +3,11 @@ module.exports = function (bodyObj, type, cb){
   var request = require('request');
 
   baelishURL = 'demo.crowdprocess.com';
-  sonnyURL = 'embers.crowdprocess.com/emberspsql';
+  postgisURL = 'embers.crowdprocess.com/emberspsql';
 
   var URL;
   if (type === 'postgis')
-    URL = 'http://'+ sonnyURL + '/clcdata';
+    URL = 'http://'+ postgisURL + '/clcdata';
   else
     URL = 'http://'+ baelishURL + '/grassdata';
 
@@ -19,4 +19,4 @@ module.exports = function (bodyObj, type, cb){
     if (error) cb (error, null);
     cb(null, body);
   });
-}
+};

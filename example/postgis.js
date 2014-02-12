@@ -9,7 +9,7 @@ var cA = [ 41 + 46.0 / 60 + 41.88 /3600, - (8 +  9.0 / 60 + 4.39/3600)];
 
 var f = true;
 
-cB = cconv(sridA, sridB, cA, f);
+var cB = cconv(sridA, sridB, cA, f);
 
 var length = 4000;
 var width = 4000;
@@ -31,16 +31,16 @@ var cols = 10;
 console.log('map length:', E-W);
 console.log('map height:', N-S);
 
-
 var boundaries = {
   north: N,
   south: S,
   east: E,
   west: W,
   r: rows,
-  c: cols};
+  c: cols
+};
 
 postgisClient(boundaries, 'postgis', function(err, data){
   if (err) throw err;
-  console.log(data)
+  console.log(data);
 });
