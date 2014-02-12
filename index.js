@@ -2,12 +2,12 @@ module.exports = function (bodyObj, type, cb){
 
   var request = require('request');
 
-  baelishURL = 'demo.crowdprocess.com';
-  postgisURL = 'embers.crowdprocess.com/emberspsql';
+  var baelishURL = 'demo.crowdprocess.com';
+  var postgisURL = 'embers.crowdprocess.com/emberspsql';
 
   var URL;
   if (type === 'postgis')
-    URL = 'http://'+ postgisURL + '/clcdata';
+    URL = 'https://'+ postgisURL + '/clcdata';
   else
     URL = 'http://'+ baelishURL + '/grassdata';
 
